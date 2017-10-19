@@ -1,5 +1,7 @@
 # Map File for Group Project Game
 
+from items import *
+
 # Repair Room, Saloon, Spaceship, Medieval, Underworld, Atlantis, Egypt, Boss Room
 
 repair_room = {"name": "Repair Shop",
@@ -92,3 +94,12 @@ In Hades’s hand, is a pair of familiar looking keys – your Hello Kitty keych
              "exits": {"south": "Underworld"},
 
              "items": [item_keys]}
+
+rooms = {
+    "Repair": repair_room,
+    "Saloon": saloon_room,
+    "Atlantis": atlantis_room,
+    "Egypt": egypt_room,
+    "Space": space_room,
+    "Underworld": underworld_room,
+    "Boss": boss_room}

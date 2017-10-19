@@ -56,3 +56,5 @@ item_keys = {
     "name": "Spaceship Keys",
 
     "description": "The keys to your ship, with your lovely Hello Kitty keychain. It's even got glitter on it!"""}
+
+items = {"whiskey": item_whiskey, "trident": item_trident, "sword": item_sword, "armour": item_armour, "gem": item_gem, "ore": item_ore, "keys": item_keys}
