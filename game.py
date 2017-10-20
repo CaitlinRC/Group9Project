@@ -10,4 +10,5 @@ from gameparser import *
 # Take
 # Drop
 # Use
+# Display Room (Description/Items/Options)
 # Something to deal with Speech (??)
