@@ -11,3 +11,14 @@ from gameparser import *
 # Drop
 # Use
 # Something to deal with Speech (??)
+
+def print_room(room):
+	"""This function displays current room's name and description. Also, if there are any items, it displays them"""
+	print(room["name"].upper())
+	print()
+	print(room["description"])
+	print()
+	print()
+	print_room_items(room)
+
+		
