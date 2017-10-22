@@ -82,3 +82,9 @@ def drop(item_id):
 			print("You cannot drop item here.")
 			      
 			      
+=======
+def print_menu(exits, room_items, inv_items):
+        print("You can:")
+        for direction in exits:
+                print_exit(direction, exit_leads_to(exits, direction))   
+        print("What do you want to do?")
