@@ -13,7 +13,7 @@ from gameparser import *
 # Display Room (Description/Items/Options)
 # Something to deal with Speech (??)
 
-<<<<<<< HEAD
+======
 def print_room(room):
 	"""This function displays current room's name and description. Also, if there are any items, it displays them"""
 	print(room["name"].upper())
@@ -50,9 +50,10 @@ def use(user_input):
 
         print('You put on the armour, the heavy metal weighing you down but protecting you from any harm.')
         item_armour["worn"] = True
+        inventory.remove(item_armour)
 
 
     else:
         print('You cannot use that.')
         
->>>>>>> e98aa971edcd676841c51b0d1417192e912f011f
+
