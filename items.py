@@ -67,4 +67,13 @@ item_metal = {
 
     "description": """"The rare metal you retrieved from the ore found on the spaceship. Perfect to use for your exhaust pipe."""}
 
-items = {"whiskey": item_whiskey, "trident": item_trident, "sword": item_sword, "armour": item_armour, "gem": item_gem, "ore": item_ore, "keys": item_keys, "metal": item_metal}
+items = {
+    "whiskey": item_whiskey, 
+    "trident": item_trident, 
+    "sword": item_sword, 
+    "armour": item_armour, 
+    "gem": item_gem, 
+    "ore": item_ore, 
+    "keys": item_keys, 
+    "metal": item_metal
+}

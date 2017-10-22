@@ -120,4 +120,5 @@ rooms = {
     "Egypt": egypt_room,
     "Space": space_room,
     "Underworld": underworld_room,
-    "Boss": boss_room}
+    "Boss": boss_room
+}

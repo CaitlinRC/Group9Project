@@ -52,8 +52,18 @@ def use(user_input):
         item_armour["worn"] = True
         inventory.remove(item_armour)
 
-
     else:
         print('You cannot use that.')
         
-
+=======
+def take(item_id):
+        """This function takes an item_id and moves it from the list of items in the current room to the player's inventory."""   
+    item_exists = False
+    for item in current_room["items"]:
+        if item_id == item["id"]:
+            item_exists = True
+            current_room["items"].remove(item)
+            inventory.append(item)
+            print(item["name"] + " added to your bag")
+        if not item_exists:
+            print("You cannot take that")
