@@ -28,6 +28,8 @@ item_sword = {
 item_armour = {
     "id": "armour",
 
+    "worn": False,
+
     "name": "Suit Of Armour",
 
     "description":
@@ -57,4 +59,12 @@ item_keys = {
 
     "description": "The keys to your ship, with your lovely Hello Kitty keychain. It's even got glitter on it!"""}
 
-items = {"whiskey": item_whiskey, "trident": item_trident, "sword": item_sword, "armour": item_armour, "gem": item_gem, "ore": item_ore, "keys": item_keys}
+
+item_metal = {
+    "id": "metal",
+
+    "name": "Rare Metal",
+
+    "description": """"The rare metal you retrieved from the ore found on the spaceship. Perfect to use for your exhaust pipe."""}
+
+items = {"whiskey": item_whiskey, "trident": item_trident, "sword": item_sword, "armour": item_armour, "gem": item_gem, "ore": item_ore, "keys": item_keys, "metal": item_metal}
