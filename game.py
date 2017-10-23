@@ -102,10 +102,16 @@ def drop(item_id):
 			      
 			      
 def print_menu(exits, room_items, inv_items):
-        print("You can:")
-        for direction in exits:
-                print_exit(direction, exit_leads_to(exits, direction))   
-        print("What do you want to do?")
+    print("You can:")
+    for direction in exits:
+        print_exit(direction, exit_leads_to(exits, direction))
+
+    for item in room_items:
+        print("TAKE " + item["id"].upper() + " to take " + item["name"] + ".")
+    for item in inv_items:
+        print("DROP " + item["id"].upper() + " to drop " + item["name"] + ".")
+    
+    print("What do you want to do?")
 
 
 def execute_command(command):
@@ -150,7 +156,7 @@ def menu(exits, room_items, inv_items):
 def exit_leads_to(exits, direction):
     """This function takes a dictionary of exits and a direction (a particular
     exit taken from this dictionary). It returns the name of the room into which
-    this exit leads. For example:"""
+    this exit leads."""
 
     return rooms[exits[direction]]["name"]
 
