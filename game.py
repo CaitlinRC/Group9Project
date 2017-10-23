@@ -13,6 +13,29 @@ from gameparser import *
 # ASCII art?
 # Background music?
 
+def list_of_items(items):
+    """This function takes a list of items and returns a comma-separated list of item names."""
+    li = ""
+    for item in items:
+        li = li + ", " + item["name"]
+    li = li[2:]
+    return li
+
+
+def print_room_items(room):
+    """This function takes a room as an input and nicely displays a list of items
+    found in this room. If there are no items in the room, nothing is printed."""
+    if len(list_of_items(room["items"]))!=0:
+        print("There is " + list_of_items(room["items"]) + " here.\n")
+
+
+def print_inventory_items(items):
+    """This function takes a list of inventory items and displays it nicely, in a
+    manner similar to print_room_items()."""
+    if len(items)!=0:
+        print("You have " + list_of_items(items) + ".\n")
+
+
 def print_room(room):
 	"""This function displays current room's name and description. Also, if there are any items, it displays them"""
 	print(room["name"].upper())
@@ -21,8 +44,6 @@ def print_room(room):
 	print()
 	print()
 	print_room_items(room)
-
-		
 
 
 # main/menu to run the whole thing
@@ -56,19 +77,17 @@ def use(user_input):
         print('You cannot use that.')
       
 
-
 def take(item_id):
-        item_exists = False
-"""This function takes an item_id and moves it from the list of items in the current room to the player's inventory."""
-        for item in current_room["items"]:
-                if item_id == item["id"]:
-                    item_exists = True
-                    current_room["items"].remove(item)
-                    inventory.append(item)
-                    print(item["name"] + " added to your bag")
-                if not item_exists:
-                    print("You cannot take that")
-
+        """This function takes an item_id and moves it from the list of items in the current room to the player's inventory."""   
+item_exists = False
+for item in current_room["items"]:
+    if item_id == item["id"]:
+        item_exists = True
+        current_room["items"].remove(item)
+        inventory.append(item)
+        print(item["name"] + " added to your bag")
+    if not item_exists:
+        print("You cannot take that")
 
 
 def drop(item_id):
@@ -82,12 +101,51 @@ def drop(item_id):
 			print("You cannot drop item here.")
 			      
 			      
-
 def print_menu(exits, room_items, inv_items):
         print("You can:")
         for direction in exits:
                 print_exit(direction, exit_leads_to(exits, direction))   
         print("What do you want to do?")
+
+
+def execute_command(command):
+    if 0 == len(command):
+        return
+
+    if command[0] == "go":
+        if len(command) > 1:
+            execute_go(command[1])
+        else:
+            print("Go where?")
+
+    elif command[0] == "take":
+        if len(command) > 1:
+            execute_take(command[1])
+        else:
+            print("Take what?")
+
+    elif command[0] == "drop":
+        if len(command) > 1:
+            execute_drop(command[1])
+        else:
+            print("Drop what?")
+
+    else:
+        print("This makes no sense.")
+
+
+def menu(exits, room_items, inv_items):
+    """This function, given a dictionary of possible exits from a room, and a list
+    of items found in the room and carried by the player, prints the menu of
+    actions using print_menu() function. It then asks the player to type an
+    action. The players's input is normalised using the normalise_input()
+    function before being returned."""
+
+    print_menu(exits, room_items, inv_items)
+    user_input = input("> ")
+    normalised_user_input = normalise_input(user_input)
+    return normalised_user_input
+
 
 def exit_leads_to(exits, direction):
     """This function takes a dictionary of exits and a direction (a particular
@@ -138,6 +196,7 @@ def move(exits, direction):
 
     # Next room to go to
     return rooms[exits[direction]]
+
 
 def main():
 
