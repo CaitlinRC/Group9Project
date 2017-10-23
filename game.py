@@ -181,7 +181,7 @@ def execute_go(direction):
     """
     global current_room
     exits = current_room['exits']
-
+    
     if is_valid_exit(exits, direction):
         current_room = move(exits, direction)
 
