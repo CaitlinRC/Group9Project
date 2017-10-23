@@ -205,19 +205,19 @@ def move(exits, direction):
 
 
 def main():
-
-    # Main game loop
-    while True:
-       
-        
+    win = False
+    while not (win):
         print_room(current_room)
         print_inventory_items(inventory)
 
-       
         command = menu(current_room["exits"], current_room["items"], inventory)
 
         execute_command(command)
 
+        if len(rooms["Repair"]["items"]) == 8:
+            win =True
+            print("Congratulations you have won")
+
+
 if __name__ == "__main__":
     main()
-
