@@ -74,6 +74,8 @@ def take(item_id):
 
 
 =======
+'''this function drops an item from their inventry into the current room, if the item does not exist in their
+inventory then it prints a error message'''
 def drop(item_id):
 	for item in inventory:
 		if item["id"] == item_id:
