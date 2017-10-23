@@ -3,13 +3,15 @@ from items import *
 from player import *
 from gameparser import *
 
-# Functions Needed:
-# Move
-# Take
-# Drop
-# Use
-# Display Room (Description/Items/Options)
-# Something to deal with Speech (??)
+# Work that still needs to be done:
+# Sort Interactions function (mummy/cowboy/hades etc)
+# Needs to print what you can take/drop/use in a room + current lives
+# Need print room items/print inventory functions
+
+# Extra stuff:
+# Title screen?
+# ASCII art?
+# Background music?
 
 ======
 def print_room(room):
