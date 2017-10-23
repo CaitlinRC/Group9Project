@@ -46,7 +46,7 @@ Neither of them look happy to see you.""",
 
                "exits": {"south": "Repair", "north": "Atlantis", "west": "Castle"},
 
-               "items": []}
+               "items": [item_whiskey]}
 
 atlantis_room = {"name": "Atlantis",
 
@@ -57,7 +57,7 @@ The guards allow you to pass and you stand facing the great god, whose trident g
 
                  "exits": {"south": "Saloon", "north": "Space"},
 
-                 "items": []}
+                 "items": [item_trident]}
 
 medieval_room = {"name": "Castle",
 
@@ -92,7 +92,7 @@ This would be perfect to fix your ship’s exhaust with; however, you can’t cu
 
               "exits": {"west": "Egypt", "south": "Atlantis", "north": "Underworld"},
 
-              "items": [item_ore]}
+              "items": [item_ore, item_metal]}
 
 underworld_room = {"name": "Underworld",
 
@@ -115,7 +115,7 @@ In Hades’s hand, is a pair of familiar looking keys – your Hello Kitty keych
 
              "exits": {"south": "Underworld"},
 
-             "items": []}
+             "items": [item_keys]}
 
 rooms = {
     "Repair": repair_room,
