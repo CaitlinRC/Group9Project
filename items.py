@@ -41,7 +41,7 @@ item_gem = {
 
     "name": "Mystical Gem",
 
-    "description": "The refraction capabilities of this gem could power your generator for months. Taken from the mummy's grasp."""}
+    "description": "The refractive capabilities of this gem could power your generator for months. Taken from the mummy's grasp."""}
 
 
 item_ore = {
