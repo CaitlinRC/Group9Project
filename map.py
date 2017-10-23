@@ -119,7 +119,7 @@ In Hades’s hand, is a pair of familiar looking keys – your Hello Kitty keych
 
 rooms = {
     "Repair": repair_room,
-    "Medieval Castle": medieval_room,
+    "Castle": medieval_room,
     "Saloon": saloon_room,
     "Atlantis": atlantis_room,
     "Egypt": egypt_room,
