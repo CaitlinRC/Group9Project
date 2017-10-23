@@ -17,7 +17,7 @@ def remove_punctuation(text):
 
     # Used to remove all punctuation from a string (not including spaces)
 
-    no_puncutation = ""
+    no_punctuation = ""
 
     for character in text:
 
@@ -53,6 +53,6 @@ def normalise_input(user_input):
 
     unfiltered_list = no_whitespace.split()
 
-    filtered_list = filter_words(unfiltered_list, skip_words)
+    filtered_list = filter_words(unfiltered_list, key_words)
 
     return filtered_list

@@ -12,6 +12,7 @@ from items import *
 from player import *
 from gameparser import *
 from character_dict import *
+from game import *
 
 
 def cowboy_interaction():
@@ -38,9 +39,9 @@ def mummy_interaction():
             print('The mummy\'s teeth sink into your skin! If only you had some protection... (-1 Life)')
             lives -= 1
 
-    elif (filtered_input[0] == 'go') and (filtered_input[2] == 'south'):
+    elif (filtered_input[0] == 'go') and (filtered_input[1] == 'south'):
 
-        execute_go(filtered_input[2])
+        execute_go(filtered_input[1])
 
     elif filtered_input[0] == 'fight':
 
