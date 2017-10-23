@@ -6,6 +6,7 @@ from items import *
 
 repair_room = {"name": "Repair Shop",
 
+<<<<<<< HEAD
                "description": """A long time ago in a galaxy far, far away… 
 
 	After a long, tedious journey through both galaxies and new dimensions you 
@@ -31,6 +32,29 @@ repair_room = {"name": "Repair Shop",
 
  	You inspect it from a distance and realise its an intergalactic gun.
  	Maybe there is some hope of getting home… """,
+=======
+               "description": """A long time ago in a galaxy far, far away…
+After a long, tedious journey through both galaxies and new dimensions you find yourself at the mercy of a blackhole, with barely any fuel,
+a broken battery, and no defence shield, disaster strikes.
+A rogue asteroid hits your spaceship ripping a hole into the power room of your ship, before you can engage the cockpit oxygen locks, your last fuel can,
+battery ore, tools and parachute are sucked out into the hole.
+
+After securing the cockpit, you realise that you will not have enough fuel to get you home, nor will your generator battery last.
+Your only option is to land on the nearest planet. 
+After a bumpy ride through Pandora’s atmosphere you make a crash landing on the outskirts of a town.
+You realise your only hope of getting home is to hunt down the necessary parts to fix your spaceship.
+You reach the local “repair shop” and enter through the front door.
+
+In the shop you are welcomed by a large pool of oil left on the floor, a rusty exhaust on the floor and numerous empty cardboard boxes on the floor, the owner is nowhere to be seen.
+You soon realise that your hunt for parts is short lived.
+
+In order to get home you will need your keys, something to power your generator, a flammable fuel source and a piece of metal to fix the exhaust with.
+
+However, in the corner of the shop you notice something glowing under a piece of crumpled newspaper.
+
+You inspect it from a distance and realise its an intergalactic gun.
+Maybe there is some hope of getting home… """,
+>>>>>>> 6f12d9417a7149a8f1d53c0a67ee4c1538e729d2
 
                "exits": {"north": "Saloon"},
 
@@ -46,28 +70,26 @@ Neither of them look happy to see you.""",
 
                "exits": {"south": "Repair", "north": "Atlantis", "west": "Castle"},
 
-               "items": [item_whiskey]}
+               "items": []}
 
 atlantis_room = {"name": "Atlantis",
 
                  "description": """You stand in the entrance of Poseidon’s domain, known as Atlantis.
 It is a gorgeous palace made of gems and coral, located on the ocean floor.
 Chariots ride past you, pulled by sea horses and guards stand between you and the great god Poseidon.
-To speak with the god, they say, you must first solve a riddle to prove you are worthy of his time.
-“Poor people have it, Rich people need it, and if you eat it you will die.”
-What is it?""",
+The guards allow you to pass and you stand facing the great god, whose trident glows with mystical power.""",
 
                  "exits": {"south": "Saloon", "north": "Space"},
 
-                 "items": [item_trident]}
+                 "items": []}
 
 medieval_room = {"name": "Castle",
 
-                 "description": """You find yourself in the great hall of a medieval castle.
-                 The walls are covered with tapestries that blaze a family sigil that you are not familiar with.
-                 The room is lined with long benches and tables, clearly several hundred people could fit into this room if it was deemed necessary.
-                 A pair of thrones sit at the far end of the room on a raised platform, with a set of armour standing tall near the door.
-                 In the suit of armour’s hands is a longsword, the metal shining brightly in the light.""",
+                "description": """You find yourself in the great hall of a medieval castle.
+The walls are covered with tapestries that blaze a family sigil that you are not familiar with.
+The room is lined with long benches and tables, clearly several hundred people could fit into this room if it was deemed necessary.
+A pair of thrones sit at the far end of the room on a raised platform, with a set of armour standing tall near the door.
+In the suit of armour’s hands is a longsword, the metal shining brightly in the light.""",
 
                  "exits": {"east": "Saloon", "north": "Egypt"},
 
@@ -117,7 +139,7 @@ In Hades’s hand, is a pair of familiar looking keys – your Hello Kitty keych
 
              "exits": {"south": "Underworld"},
 
-             "items": [item_keys]}
+             "items": []}
 
 rooms = {
     "Repair": repair_room,

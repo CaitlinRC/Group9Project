@@ -45,6 +45,7 @@ def print_room(room):
 	print()
 	print_room_items(room)
 
+<<<<<<< HEAD
 
 # main/menu to run the whole thing
 
@@ -115,6 +116,12 @@ def execute_command(command):
     execute_take, or execute_drop, supplying the second word as the argument.
 
     """
+=======
+		
+=======
+
+# main/menu to run the whole thing
+>>>>>>> 6f12d9417a7149a8f1d53c0a67ee4c1538e729d2
 
     if 0 == len(command):
         return
