@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from map import rooms
 from items import *
 from player import *
@@ -301,4 +300,20 @@ def move(exits, direction):
 
     # Next room to go to
     return rooms[exits[direction]]
->>>>>>> a474871d0bc4b7bdf5f1585e635b592f87bd9e90
+
+def main():
+
+    # Main game loop
+    while True:
+       
+        
+        print_room(current_room)
+        print_inventory_items(inventory)
+
+       
+        command = menu(current_room["exits"], current_room["items"], inventory)
+
+        execute_command(command)
+
+if __name__ == "__main__":
+    main()
