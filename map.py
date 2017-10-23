@@ -6,27 +6,31 @@ from items import *
 
 repair_room = {"name": "Repair Shop",
 
-               "description": """A long time ago in a galaxy far, far away…
-After a long, tedious journey through both galaxies and new dimensions you find yourself at the mercy of a blackhole, with barely any fuel,
-a broken battery, and no defence shield, disaster strikes.
-A rogue asteroid hits your spaceship ripping a hole into the power room of your ship, before you can engage the cockpit oxygen locks, your last fuel can,
-battery ore, tools and parachute are sucked out into the hole.
+               "description": """A long time ago in a galaxy far, far away… 
 
-After securing the cockpit, you realise that you will not have enough fuel to get you home, nor will your generator battery last.
-Your only option is to land on the nearest planet. 
-After a bumpy ride through Pandora’s atmosphere you make a crash landing on the outskirts of a town.
-You realise your only hope of getting home is to hunt down the necessary parts to fix your spaceship.
-You reach the local “repair shop” and enter through the front door.
+	After a long, tedious journey through both galaxies and new dimensions you 
+  find yourself at the mercy of a blackhole, with barely any fuel, a broken 
+  battery, and no defence shield, disaster strikes. A rogue asteroid hits 
+  your spaceship ripping a hole into the power room of your ship, before you 
+  can engage the cockpit oxygen locks, your last fuel can, battery ore, tools
+  and parachute are sucked out into the hole.
+	
+	After securing the cockpit, you realise that you will not have enough fuel 
+  to get you home, nor will your generator battery last. Your only option is 
+  to land on the nearest planet. After a bumpy ride through Pandora’s atmosphere
+  you make a crash landing on the outskirts of a town. You realise your only hope
+  of getting home is to hunt down the necessary parts to fix your spaceship.
+ 	You reach the local “repair shop” and enter through the front door.
 
-In the shop you are welcomed by a large pool of oil left on the floor, a rusty exhaust on the floor and numerous empty cardboard boxes on the floor, the owner is nowhere to be seen.
-You soon realise that your hunt for parts is short lived.
+ 	In the shop you are welcomed by a large pool of oil left on the floor, a rusty
+  exhaust on the floor and numerous empty cardboard boxes on the floor, the owner 
+  is nowhere to be seen.
+ 	You soon realise that your hunt for parts is short lived.
+ 	However, in the corner of the shop you notice something glowing under a piece 
+  of crumpled newspaper.
 
-In order to get home you will need your keys, something to power your generator, a flammable fuel source and a piece of metal to fix the exhaust with.
-
-However, in the corner of the shop you notice something glowing under a piece of crumpled newspaper.
-
-You inspect it from a distance and realise its an intergalactic gun.
-Maybe there is some hope of getting home… """,
+ 	You inspect it from a distance and realise its an intergalactic gun.
+ 	Maybe there is some hope of getting home… """,
 
                "exits": {"north": "Saloon"},
 
