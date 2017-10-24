@@ -246,7 +246,12 @@ def use(item_id):
             inventory.append(item_metal)
 
         else:
-            print('The sword can\'t be used on that.')
+
+            if item_ore not in inventory:
+                print('You can\'t cut something you don\'t have!')
+
+            else:
+                print('The sword can\'t be used on that.')
 
     elif (item_id == 'armour') and (item_armour in inventory):
 
