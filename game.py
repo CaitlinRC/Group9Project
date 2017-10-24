@@ -56,6 +56,8 @@ def mummy_interaction():
     global inventory
     global current_room
 
+    leaving_interaction = False
+
     print('As you step closer to the sarcophagus, a mummy rises from it and staggers towards you.\nIt\'s teeth are gnashing for a taste of your skin. You can see the gems you need glinting behind it.')
 
     while True:
@@ -324,8 +326,10 @@ def print_menu(exits, room_items, inv_items):
         elif current_room["name"] == "Boss":
 
             hades_interaction()
+ 
     
     print("\nYou can:\n")
+    
     for direction in exits:
         print_exit(direction, exit_leads_to(exits, direction))
 
@@ -420,6 +424,19 @@ def execute_go(direction):
     global current_room
     exits = current_room['exits']
     
+<<<<<<< HEAD
+=======
+### init music
+##    pygame.mixer.init()
+##    # load music
+##    track = pygame.mixer.music.load(current_room["name"])
+##    # set volume
+##    pygame.mixer.music.set_volume(5.0)
+##    # play music
+##    pygame.mixer.music.play()
+##    # Main game loop
+
+>>>>>>> b4d9b6e332928ba543ab4feb71c048d1ee433d4b
     if is_valid_exit(exits, direction):
         current_room = move(exits, direction)
     # init music
@@ -511,7 +528,7 @@ You reach the local “repair shop” and enter through the front door.""")
 
         if (item_gem in rooms["Repair"]["items"]) and (item_keys in rooms["Repair"]["items"]) and (item_metal in rooms["Repair"]["items"]) and (item_whiskey in rooms["Repair"]["items"]):
             win = True
-            print("Congratulations you have won.")
+            print("\nCONGRATULATIONS YOU HAVE WON. YOU FLY HOME TO EARTH, READY FOR ANOTHER ADVENTURE!")
             time.sleep(5)
             break
 
