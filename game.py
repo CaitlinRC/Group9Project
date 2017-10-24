@@ -16,28 +16,28 @@ def cowboy_interaction():
 
     while True:
 
-        user_input = input('\nYou can: TALK to him, PUNCH him or KISS him (because why not).')
+        user_input = input('\nYou can: \n\n1)TALK to him \n2)PUNCH him  \n3)KISS him (because why not) \n\nWhat do you do: ')
 
         filtered_input = normalise_input(user_input)
 
         if filtered_input[0] == 'talk':
 
-            print('He doesn\'t appreciate you trying to smart talk him. Before you can get a word out, he punches you in the face (-1 Life).')
+            print('\nHe doesn\'t appreciate you trying to smart talk him. Before you can get a word out, he punches you in the face (-1 Life).')
             lives -= 1
 
         elif filtered_input[0] == 'punch':
 
-            print("You land a solid hit on the bridge of his nose and he staggers backwards, tripping over his chair and landing on his ass.\nHe and his friends back away from you. You snatch up the bottle of whiskey from the table.")
+            print("\nYou land a solid hit on the bridge of his nose and he staggers backwards, tripping over his chair and landing on his ass.\nHe and his friends back away from you. You snatch up the bottle of whiskey from the table.")
             inventory.append(item_whiskey)
             current_room["interaction"] = False
             break
 
         elif filtered_input[0] == 'kiss':
 
-            print("For whatever reason, you decide to kiss him. He pushes you off him, wiping his mouth and says: 'Sorry buddy, you ain't my type.'")
+            print("\nFor whatever reason, you decide to kiss him. He pushes you off him, wiping his mouth and says: 'Sorry buddy, you ain't my type.'")
             
         else:
-            print("You can\'t do that.")
+            print("\nYou can\'t do that.")
             
 def mummy_interaction():
 
@@ -176,13 +176,14 @@ def print_inventory_items(items):
 
 
 def print_room(room):
-	"""This function displays current room's name and description. Also, if there are any items, it displays them"""
-	print(room["name"].upper())
-	print()
-	print(room["description"])
-	print()
-	print()
-	print_room_items(room)
+#"""This function displays current room's name and description. Also, if there are any items, it displays them"""
+    print()
+    print(room["name"].upper())
+    print()
+    print(room["description"])
+    print()
+    print()
+    print_room_items(room)
 
 
 # main/menu to run the whole thing
@@ -275,7 +276,7 @@ def print_menu(exits, room_items, inv_items):
 
             hades_interaction()
     
-    print("You can:")
+    print("\nYou can:\n")
     for direction in exits:
         print_exit(direction, exit_leads_to(exits, direction))
 
@@ -288,7 +289,7 @@ def print_menu(exits, room_items, inv_items):
         if (item["id"] == "sword") or (item["id"] == "armour"):
             print("USE " + item["id"].upper() + " to use " + item["name"] + ".")
         
-    print("What do you want to do?")
+    print("\nWhat do you want to do?")
 
 
 def execute_command(command):
@@ -420,6 +421,23 @@ def main():
     print("          /  /               |                    \  \ ")
     print("        _/_/                     | |                \_\_ ")
     time.sleep(4)
+
+    print("""A long time ago in a galaxy far, far away…
+
+After a long, tedious journey through both galaxies and new dimensions you 
+find yourself at the mercy of a blackhole, with barely any fuel, a broken 
+battery, and no defence shield, disaster strikes. A rogue asteroid hits
+your spaceship ripping a hole into the power room of your ship, before you
+can engage the cockpit oxygen locks, your last fuel can, battery ore, tools
+and parachute are sucked out into the hole.
+
+After securing the cockpit, you realise that you will not have enough fuel
+to get you home, nor will your generator battery last. Your only option is
+to land on the nearest planet. After a bumpy ride through Pandora’s atmosphere
+you make a crash landing on the outskirts of a town. You realise your only hope
+of getting home is to hunt down the necessary parts to fix your spaceship.
+
+You reach the local “repair shop” and enter through the front door.""")
 
     win = False
     while not (win):
