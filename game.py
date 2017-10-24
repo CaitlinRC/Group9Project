@@ -3,11 +3,6 @@ from items import *
 from player import *
 from gameparser import *
 
-# NEEDS TO PRINT ITEMS THAT CAN BE USED
-# CHECK USE FUNCTION WORKS
-# DONT ALLOW THEM TO TAKE ITEMS WITHOUT COMPLETING INTERACTIONS FIRST
-# Only ore and armour/sword should be takeable immediately
-
 # INTERACTIONS CODE
 
 def cowboy_interaction():
@@ -33,8 +28,8 @@ def cowboy_interaction():
 
             print("You land a solid hit on the bridge of his nose and he staggers backwards, tripping over his chair and landing on his ass.\nHe and his friends back away from you. You snatch up the bottle of whiskey from the table.")
             inventory.append(item_whiskey)
-            current_room["items"].remove(item_whiskey)
-            False
+            current_room["interaction"] = False
+            break
 
         elif filtered_input[0] == 'kiss':
 
@@ -56,7 +51,6 @@ def mummy_interaction():
         user_input = input('\nYou can: Attempt to TAKE the gem, GO SOUTH to the previous room or attempt to FIGHT: ')
 
         filtered_input = normalise_input(user_input)
-        print(filtered_input)
 
         if filtered_input[0] == 'fight':
 
@@ -69,7 +63,8 @@ def mummy_interaction():
 
                 print('You grab the gem, the mummys teeth unable to harm you in your suit of armour.')
                 inventory.append(item_gem)
-                False
+                current_room["interaction"] = False
+                break
 
             else:
                 print('The mummy\'s teeth sink into your skin! If only you had some protection... (-1 Life)')
@@ -79,8 +74,8 @@ def mummy_interaction():
 
             exits = current_room["exits"]
             current_room = move(exits, "south")
-            # THIS BIT DOESNT WORK YET BUT IT DOES RUN WHEN NEEDED
-            False
+            print_room(current_room)
+            break
 
         else:
             print('You cannot do that.')
@@ -104,8 +99,8 @@ def poseidon_interaction():
 
             print("Poseidon stares at you in shock for a moment before handing over his trident and storming off in a huff.")
             inventory.append(item_trident)
-            current_room["items"].remove(item_trident)
-            False
+            current_room["interaction"] = False
+            break
 
         else:
             print("Incorrect! As a punishment, Poseidon smites you. (-1 Life)")
@@ -134,15 +129,18 @@ def hades_interaction():
 
             print("Hades chucks you the set of keys and gestures for you to get out, too focused on the trident to care about you anymore.")
 
+            current_room["interaction"] = False
             exits = current_room["exits"]
             current_room = move(exits, "south")
-            False
+            print_room(current_room)
+            break
 
         elif (filtered_input[0] == "go") and (filtered_input[1] == "south"):
 
             exits = current_room["exits"]
             current_room = move(exits, "south")
-            False
+            print_room(current_room)
+            break
 
         else:
             print("You can\'t do that.")
@@ -251,6 +249,30 @@ def drop(item_id):
 			      
 			      
 def print_menu(exits, room_items, inv_items):
+
+    global current_room
+
+    if current_room["interaction"] == True:
+
+        if current_room["name"] == "Saloon":
+
+            cowboy_interaction()
+
+        elif current_room["name"] == "Atlantis":
+
+            poseidon_interaction()
+
+        elif current_room["name"] == "Egypt":
+
+            mummy_interaction()
+
+        elif current_room["name"] == "Underworld":
+
+            guard_interaction()
+
+        elif current_room["name"] == "Boss":
+
+            hades_interaction()
     
     print("You can:")
     for direction in exits:

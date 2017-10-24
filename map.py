@@ -6,35 +6,39 @@ from items import *
 
 repair_room = {"name": "Repair Shop",
 
-               "description": """A long time ago in a galaxy far, far away… 
+               "description": """A long time ago in a galaxy far, far away…
 
-	After a long, tedious journey through both galaxies and new dimensions you 
-  find yourself at the mercy of a blackhole, with barely any fuel, a broken 
-  battery, and no defence shield, disaster strikes. A rogue asteroid hits 
-  your spaceship ripping a hole into the power room of your ship, before you 
-  can engage the cockpit oxygen locks, your last fuel can, battery ore, tools
-  and parachute are sucked out into the hole.
-	
-	After securing the cockpit, you realise that you will not have enough fuel 
-  to get you home, nor will your generator battery last. Your only option is 
-  to land on the nearest planet. After a bumpy ride through Pandora’s atmosphere
-  you make a crash landing on the outskirts of a town. You realise your only hope
-  of getting home is to hunt down the necessary parts to fix your spaceship.
- 	You reach the local “repair shop” and enter through the front door.
+After a long, tedious journey through both galaxies and new dimensions you 
+find yourself at the mercy of a blackhole, with barely any fuel, a broken 
+battery, and no defence shield, disaster strikes. A rogue asteroid hits
+your spaceship ripping a hole into the power room of your ship, before you
+can engage the cockpit oxygen locks, your last fuel can, battery ore, tools
+and parachute are sucked out into the hole.
 
- 	In the shop you are welcomed by a large pool of oil left on the floor, a rusty
-  exhaust on the floor and numerous empty cardboard boxes on the floor, the owner 
-  is nowhere to be seen.
- 	You soon realise that your hunt for parts is short lived.
- 	However, in the corner of the shop you notice something glowing under a piece 
-  of crumpled newspaper.
+After securing the cockpit, you realise that you will not have enough fuel
+to get you home, nor will your generator battery last. Your only option is
+to land on the nearest planet. After a bumpy ride through Pandora’s atmosphere
+you make a crash landing on the outskirts of a town. You realise your only hope
+of getting home is to hunt down the necessary parts to fix your spaceship.
 
- 	You inspect it from a distance and realise its an intergalactic gun.
- 	Maybe there is some hope of getting home… """,
+You reach the local “repair shop” and enter through the front door.
+
+In the shop you are welcomed by a large pool of oil left on the floor, a rusty
+exhaust on the floor and numerous empty cardboard boxes on the floor, the owner
+is nowhere to be seen.
+
+You soon realise that your hunt for parts is short lived.
+However, in the corner of the shop you notice something glowing under a piece
+of crumpled newspaper.
+
+You inspect it from a distance and realise its an intergalactic gun.
+Maybe there is some hope of getting home… """,
 
                "exits": {"north": "Saloon"},
 
-               "items": []}
+               "items": [],
+
+               "interaction": False}
 
 saloon_room = {"name": "Saloon",
 
@@ -46,7 +50,9 @@ Neither of them look happy to see you.""",
 
                "exits": {"south": "Repair", "north": "Atlantis", "west": "Castle"},
 
-               "items": [item_whiskey]}
+               "items": [],
+
+               "interaction": True}
 
 atlantis_room = {"name": "Atlantis",
 
@@ -57,7 +63,9 @@ The guards allow you to pass and you stand facing the great god, whose trident g
 
                  "exits": {"south": "Saloon", "north": "Space"},
 
-                 "items": [item_trident]}
+                 "items": [],
+
+                 "interaction": True}
 
 medieval_room = {"name": "Castle",
 
@@ -69,7 +77,9 @@ In the suit of armour’s hands is a longsword, the metal shining brightly in th
 
                  "exits": {"east": "Saloon", "north": "Egypt"},
 
-                 "items": [item_sword, item_armour]}
+                 "items": [item_sword, item_armour],
+
+                 "interaction": False}
 
 egypt_room = {"name": "Egypt",
 
@@ -79,7 +89,9 @@ In the centre of the room, lies a golden sarcophagus, riddled with gems that loo
 
               "exits": {"south": "Castle", "east": "Space"},
 
-              "items": [item_gem]}
+              "items": [],
+
+              "interaction": True}
 
 space_room = {"name": "Space",
 
@@ -92,7 +104,9 @@ This would be perfect to fix your ship’s exhaust with; however, you can’t cu
 
               "exits": {"west": "Egypt", "south": "Atlantis", "north": "Underworld"},
 
-              "items": [item_ore]}
+              "items": [item_ore],
+
+              "interaction": False}
 
 underworld_room = {"name": "Underworld",
 
@@ -103,7 +117,9 @@ Your only route to the boss room is by convincing Charon, a man with eyes blazin
 
                    "exits": {"south": "Space", "north": "Boss"},
 
-                   "items": []}
+                   "items": [],
+
+                   "interaction": True}
 
 boss_room = {"name": "Boss",
 
@@ -115,7 +131,9 @@ In Hades’s hand, is a pair of familiar looking keys – your Hello Kitty keych
 
              "exits": {"south": "Underworld"},
 
-             "items": [item_keys]}
+             "items": [],
+
+             "interaction": True}
 
 rooms = {
     "Repair": repair_room,
