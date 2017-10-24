@@ -25,6 +25,11 @@ def cowboy_interaction():
             print('\nHe doesn\'t appreciate you trying to smart talk him. Before you can get a word out, he punches you in the face (-1 Life).')
             lives -= 1
 
+            if lives <= 0:
+                print("You are out of lives and have lost the game. Guess you will never get home...")
+                time.sleep(5)
+                quit()
+
         elif filtered_input[0] == 'punch':
 
             print("\nYou land a solid hit on the bridge of his nose and he staggers backwards, tripping over his chair and landing on his ass.\nHe and his friends back away from you. You snatch up the bottle of whiskey from the table.")
@@ -58,6 +63,11 @@ def mummy_interaction():
             print('You attempt to attack the mummy, flailing at it with your weapons. They have no effect.\nThe mummy clearly doesn\'t feel pain and continues to sink its teeth into your skin. (-1 Life)')
             lives -= 1
 
+            if lives <= 0:
+                print("You are out of lives and have lost the game. Guess you will never get home...")
+                time.sleep(5)
+                quit()
+
         elif (filtered_input[0] == 'take') and (filtered_input[1] == 'gem'):
 
             if item_armour["worn"] == True:
@@ -70,6 +80,11 @@ def mummy_interaction():
             else:
                 print('The mummy\'s teeth sink into your skin! If only you had some protection... (-1 Life)')
                 lives -= 1
+
+                if lives <= 0:
+                    print("You are out of lives and have lost the game. Guess you will never get home...")
+                    time.sleep(5)
+                    quit()
 
         elif (filtered_input[0] == 'go') and (filtered_input[1] == 'south'):
 
@@ -104,8 +119,13 @@ def poseidon_interaction():
             break
 
         else:
-            print("Incorrect! As a punishment, Poseidon smites you. (-1 Life)")
+            print("\nIncorrect! As a punishment, Poseidon smites you. (-1 Life)")
             lives -= 1
+
+            if lives <= 0:
+                print("You are out of lives and have lost the game. Guess you will never get home...")
+                time.sleep(5)
+                quit()
         
     
 
@@ -115,6 +135,15 @@ def hades_interaction():
     global current_room
     global inventory
 
+    
+    print("The lava burns your feet. (-1 Life)")
+    lives -= 1
+
+    if lives <= 0:
+        print("You are out of lives and have lost the game. Guess you will never get home...")
+        time.sleep(5)
+        quit()
+        
     print('Hades speaks to you, his demonic voice sending shivers down your spine:\n"So mortal, you come seeking your possessions back? Well, I\'ll give it to you if you give me my brother\'s toy."')
 
     while True:
@@ -449,9 +478,11 @@ You reach the local “repair shop” and enter through the front door.""")
 
         execute_command(command)
 
-        if len(rooms["Repair"]["items"]) == 8:
+        if (item_gem in rooms["Repair"]["items"]) and (item_keys in rooms["Repair"]["items"]) and (item_metal in rooms["Repair"]["items"]) and (item_whiskey in rooms["Repair"]["items"]):
             win = True
-            print("Congratulations you have won")
+            print("Congratulations you have won.")
+            time.sleep(5)
+            break
 
 
 if __name__ == "__main__":
