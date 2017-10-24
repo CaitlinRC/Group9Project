@@ -77,7 +77,7 @@ egypt_room = {"name": "Egypt",
 Through the dusty air, you can see that the room is filled with countless treasures and priceless artefacts that used to belong to those who were buried here.
 In the centre of the room, lies a golden sarcophagus, riddled with gems that look quite like what you need to power your generator…""",
 
-              "exits": {"south": "Medieval", "east": "Space"},
+              "exits": {"south": "Castle", "east": "Space"},
 
               "items": [item_gem]}
 
@@ -92,7 +92,7 @@ This would be perfect to fix your ship’s exhaust with; however, you can’t cu
 
               "exits": {"west": "Egypt", "south": "Atlantis", "north": "Underworld"},
 
-              "items": [item_ore, item_metal]}
+              "items": [item_ore]}
 
 underworld_room = {"name": "Underworld",
 
