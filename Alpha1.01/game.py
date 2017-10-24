@@ -374,7 +374,7 @@ def main():
     # init music
     pygame.mixer.init()
     # load music
-    track = pygame.mixer.music.load("Samuel E Wright - Under the Sea.mp3")
+    track = pygame.mixer.music.load("saloon.mp3")
     # set volume
     pygame.mixer.music.set_volume(5.0)
     # play music
