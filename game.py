@@ -119,10 +119,10 @@ def poseidon_interaction():
 
         user_input = input("What is it? ")
         filtered_input = normalise_input(user_input)
-
+        
         if filtered_input[0] == 'nothing':
 
-            print("Poseidon stares at you in shock for a moment before handing over his trident and storming off in a huff.")
+            print("\nPoseidon stares at you in shock for a moment before handing over his trident and storming off in a huff.")
             inventory.append(item_trident)
             current_room["interaction"] = False
             break
