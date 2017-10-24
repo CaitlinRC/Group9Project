@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#sudo pip3 install pygame(install it before run)
 
 from map import rooms
 from player import *
