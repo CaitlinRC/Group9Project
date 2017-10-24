@@ -120,10 +120,11 @@ def poseidon_interaction():
         print("\nPoor people have it, rich people need it and if you eat it, you will die.")
 
         user_input = input("What is it? ")
+        filtered_input = normalise_input(user_input)
+        
+        if filtered_input[0] == 'nothing':
 
-        if user_input == 'nothing':
-
-            print("Poseidon stares at you in shock for a moment before handing over his trident and storming off in a huff.")
+            print("\nPoseidon stares at you in shock for a moment before handing over his trident and storming off in a huff.")
             inventory.append(item_trident)
             current_room["interaction"] = False
             break
@@ -248,7 +249,12 @@ def use(item_id):
             inventory.append(item_metal)
 
         else:
-            print('The sword can\'t be used on that.')
+
+            if item_ore not in inventory:
+                print('You can\'t cut something you don\'t have!')
+
+            else:
+                print('The sword can\'t be used on that.')
 
     elif (item_id == 'armour') and (item_armour in inventory):
 
