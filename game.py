@@ -2,6 +2,7 @@ from map import rooms
 from items import *
 from player import *
 from gameparser import *
+import time
 
 # INTERACTIONS CODE
 
@@ -386,8 +387,43 @@ def move(exits, direction):
 
 
 def main():
+    print("")
+    print("██████╗  ██████╗ ██████╗ ████████╗ █████╗ ██╗     ")
+    print("██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗██║     ")
+    print("██████╔╝██║   ██║██████╔╝   ██║   ███████║██║     ")
+    print("██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══██║██║     ")
+    print("██║     ╚██████╔╝██║  ██║   ██║   ██║  ██║███████╗")
+    print("╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝")
+    print("                      ██╗██╗   ██╗███╗   ███╗██████╗ ")
+    print("                      ██║██║   ██║████╗ ████║██╔══██╗")
+    print("                      ██║██║   ██║██╔████╔██║██████╔╝")
+    print("                 ██   ██║██║   ██║██║╚██╔╝██║██╔═══╝ ")
+    print("                 ╚█████╔╝╚██████╔╝██║ ╚═╝ ██║██║     ")
+    print("                  ╚════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝   ")
+    print()
+    print("                    oooooOOOOOOOOOOOOOOOOooooo ")
+    print("                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ")
+    print("                 IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII ")
+    print("                HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH ")
+    print("               zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz ")
+    print("    .<><><><><><><><><><><><><><><><><><><><><><><><><><><><>. ")
+    print("  /XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\ ")
+    print("/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\ ")
+    print("\XXX[  ]XXX[  ]XXXX[  ]XXXX[  ]XXXX[  ]XXXX[  ]XXXX[  ]XXX[  ]XXX/ ")
+    print("  \XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/ ")
+    print("      ~~~~\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/~~~~ ")
+    print("               /   ~~~<><><><><><><><><><>~~~   \ ")
+    print("              /      /       |   |        \      \ ")
+    print("             /     /               |        \     \ ")
+    print("            /    /           |                \    \ ")
+    print("           /   /               |   |            \   \ ")
+    print("          /  /               |                    \  \ ")
+    print("        _/_/                     | |                \_\_ ")
+    time.sleep(4)
+
     win = False
     while not (win):
+       
         print_room(current_room)
         print_inventory_items(inventory)
 
