@@ -78,27 +78,36 @@ def use(user_input):
       
 
 def take(item_id):
-        """This function takes an item_id and moves it from the list of items in the current room to the player's inventory."""   
-item_exists = False
-for item in current_room["items"]:
-    if item_id == item["id"]:
-        item_exists = True
-        current_room["items"].remove(item)
-        inventory.append(item)
-        print(item["name"] + " added to your bag")
-    if not item_exists:
-        print("You cannot take that")
+#"""This function takes an item_id and moves it from the list of items in the current room to the player's inventory."""  
+    item_exists = False
+    
+    for item in current_room["items"]:
+        
+        if item_id == item["id"]:
+            
+            item_exists = True
+            current_room["items"].remove(item)
+            inventory.append(item)
+
+            print(item["name"] + " added to your bag")
+            
+        if not item_exists:
+            print("You cannot take that")
 
 
 def drop(item_id):
-	for item in inventory:
-		if item["id"] == item_id:
-			inventory.remove(item)
-			current_room["items"].append(item)
-			print("You have dropped", (item["name"]), "in", (current_room["name"]), ".")
-			break
-		else:
-			print("You cannot drop item here.")
+
+    for item in inventory:
+
+        if item["id"] == item_id:
+
+            inventory.remove(item)
+            current_room["items"].append(item)
+            print("You have dropped", (item["name"]), "in", (current_room["name"]), ".")
+            break
+
+        else:
+            print("You cannot drop item here.")
 			      
 			      
 def print_menu(exits, room_items, inv_items):
@@ -126,13 +135,13 @@ def execute_command(command):
 
     elif command[0] == "take":
         if len(command) > 1:
-            execute_take(command[1])
+            take(command[1])
         else:
             print("Take what?")
 
     elif command[0] == "drop":
         if len(command) > 1:
-            execute_drop(command[1])
+            drop(command[1])
         else:
             print("Drop what?")
 
