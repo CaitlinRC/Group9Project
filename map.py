@@ -1,6 +1,7 @@
 # Map File for Group Project Game
 
 from items import *
+import pygame
 
 # Repair Room, Saloon, Spaceship, Medieval, Underworld, Atlantis, Egypt, Boss Room
 
@@ -21,7 +22,9 @@ Maybe there is some hope of getting home… """,
 
                "items": [],
 
-               "interaction": False}
+               "interaction": False
+
+               }
 
 saloon_room = {"name": "Saloon",
 
@@ -35,7 +38,11 @@ Neither of them look happy to see you.""",
 
                "items": [],
 
-               "interaction": True}
+               "interaction": True,
+               
+               "bgm": "saloon.mp3"
+
+               }
 
 atlantis_room = {"name": "Atlantis",
 

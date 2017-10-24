@@ -3,6 +3,8 @@ from items import *
 from player import *
 from gameparser import *
 import time
+import pygame
+
 
 # INTERACTIONS CODE
 
@@ -412,6 +414,16 @@ def execute_go(direction):
     global current_room
     exits = current_room['exits']
     
+# init music
+    pygame.mixer.init()
+    # load music
+    track = pygame.mixer.music.load('room("bgm")')
+    # set volume
+    pygame.mixer.music.set_volume(5.0)
+    # play music
+    pygame.mixer.music.play()
+    # Main game loop
+
     if is_valid_exit(exits, direction):
         current_room = move(exits, direction)
 
@@ -429,6 +441,7 @@ def move(exits, direction):
 
 
 def main():
+   
     print("")
     print("██████╗  ██████╗ ██████╗ ████████╗ █████╗ ██╗     ")
     print("██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔══██╗██║     ")
@@ -461,7 +474,7 @@ def main():
     print("           /   /               |   |            \   \ ")
     print("          /  /               |                    \  \ ")
     print("        _/_/                     | |                \_\_ ")
-    time.sleep(4)
+    time.sleep(2)
 
     print("""A long time ago in a galaxy far, far away…
 
@@ -480,6 +493,7 @@ of getting home is to hunt down the necessary parts to fix your spaceship.
 
 You reach the local “repair shop” and enter through the front door.""")
 
+    
     win = False
     while not (win):
        
