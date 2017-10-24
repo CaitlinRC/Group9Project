@@ -20,7 +20,11 @@ def cowboy_interaction():
 
         filtered_input = normalise_input(user_input)
 
-        if filtered_input[0] == 'talk':
+        if filtered_input == []:
+
+            print('Please enter a valid option: ')
+
+        elif filtered_input[0] == 'talk':
 
             print('\nHe doesn\'t appreciate you trying to smart talk him. Before you can get a word out, he punches you in the face (-1 Life).')
             lives -= 1
@@ -58,7 +62,11 @@ def mummy_interaction():
 
         filtered_input = normalise_input(user_input)
 
-        if filtered_input[0] == 'fight':
+        if filtered_input == []:
+
+            print('Please enter a valid option: ')
+
+        elif filtered_input[0] == 'fight':
 
             print('You attempt to attack the mummy, flailing at it with your weapons. They have no effect.\nThe mummy clearly doesn\'t feel pain and continues to sink its teeth into your skin. (-1 Life)')
             lives -= 1
@@ -148,16 +156,20 @@ def hades_interaction():
 
     while True:
 
-        user_input = input("Your options are: DROP Trident, GO SOUTH back to the Underworld.")
+        user_input = input("Your options are: DROP Trident, GO SOUTH back to the Underworld: ")
 
         filtered_input = normalise_input(user_input)
 
-        if (filtered_input[0] == "drop") and (filtered_input[1] == "trident"):
+        if filtered_input == []:
+
+            print('Please enter a valid option: ')
+
+        elif (filtered_input[0] == "drop") and (filtered_input[1] == "trident"):
 
             inventory.remove(item_trident)
             inventory.append(item_keys)
 
-            print("Hades chucks you the set of keys and gestures for you to get out, too focused on the trident to care about you anymore.")
+            print("\nHades chucks you the set of keys and gestures for you to get out, too focused on the trident to care about you anymore.")
 
             current_room["interaction"] = False
             exits = current_room["exits"]
