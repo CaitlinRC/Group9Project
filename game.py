@@ -424,19 +424,6 @@ def execute_go(direction):
     global current_room
     exits = current_room['exits']
     
-<<<<<<< HEAD
-=======
-### init music
-##    pygame.mixer.init()
-##    # load music
-##    track = pygame.mixer.music.load(current_room["name"])
-##    # set volume
-##    pygame.mixer.music.set_volume(5.0)
-##    # play music
-##    pygame.mixer.music.play()
-##    # Main game loop
-
->>>>>>> b4d9b6e332928ba543ab4feb71c048d1ee433d4b
     if is_valid_exit(exits, direction):
         current_room = move(exits, direction)
     # init music
