@@ -4,6 +4,7 @@ from items import *
 import pygame
 
 # Repair Room, Saloon, Spaceship, Medieval, Underworld, Atlantis, Egypt, Boss Room
+# {Saloon:saloon.mp3, atlantis:underwater.mp3}
 
 repair_room = {"name": "Repair Shop",
 
@@ -55,7 +56,11 @@ The guards allow you to pass and you stand facing the great god, whose trident g
 
                  "items": [],
 
-                 "interaction": True}
+                 "interaction": True,
+
+                 "bgm": "underwater.mp3"                 
+
+                 }
 
 medieval_room = {"name": "Castle",
 
@@ -69,7 +74,10 @@ In the suit of armour’s hands is a longsword, the metal shining brightly in th
 
                  "items": [item_sword, item_armour],
 
-                 "interaction": False}
+                 "interaction": False,
+
+                 "bgm": "Boss.mp3"
+                 }
 
 egypt_room = {"name": "Egypt",
 
@@ -81,7 +89,10 @@ In the centre of the room, lies a golden sarcophagus, riddled with gems that loo
 
               "items": [],
 
-              "interaction": True}
+              "interaction": True,
+
+              "bgm": "saloon.mp3"
+              }
 
 space_room = {"name": "Space",
 
@@ -96,7 +107,10 @@ This would be perfect to fix your ship’s exhaust with; however, you can’t cu
 
               "items": [item_ore],
 
-              "interaction": False}
+              "interaction": False,
+
+              "bgm": "underwater.mp3"
+              }
 
 underworld_room = {"name": "Underworld",
 
@@ -109,7 +123,10 @@ Your only route to the boss room is by convincing Charon, a man with eyes blazin
 
                    "items": [],
 
-                   "interaction": True}
+                   "interaction": True,
+                   
+                   "bgm": "Boss.mp3"
+                   }
 
 boss_room = {"name": "Boss",
 
@@ -123,7 +140,10 @@ In Hades’s hand, is a pair of familiar looking keys – your Hello Kitty keych
 
              "items": [],
 
-             "interaction": True}
+             "interaction": True,
+
+             "bgm": "saloon.mp3"
+             }
 
 rooms = {
     "Repair": repair_room,

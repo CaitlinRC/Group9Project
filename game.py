@@ -420,18 +420,17 @@ def execute_go(direction):
     global current_room
     exits = current_room['exits']
     
-# init music
-    pygame.mixer.init()
-    # load music
-    track = pygame.mixer.music.load('room("bgm")')
-    # set volume
-    pygame.mixer.music.set_volume(5.0)
-    # play music
-    pygame.mixer.music.play()
-    # Main game loop
-
     if is_valid_exit(exits, direction):
         current_room = move(exits, direction)
+    # init music
+        pygame.mixer.init()
+        # load music
+        track = pygame.mixer.music.load(current_room["bgm"])
+        # set volume
+        pygame.mixer.music.set_volume(5.0)
+        # play music
+        pygame.mixer.music.play()
+        # Main game loop
 
     else:
         print("You cannot go through that portal.")
