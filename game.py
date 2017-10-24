@@ -118,8 +118,9 @@ def poseidon_interaction():
         print("\nPoor people have it, rich people need it and if you eat it, you will die.")
 
         user_input = input("What is it? ")
+        filtered_input = normalise_input(user_input)
 
-        if user_input == 'nothing':
+        if filtered_input[0] == 'nothing':
 
             print("Poseidon stares at you in shock for a moment before handing over his trident and storming off in a huff.")
             inventory.append(item_trident)
