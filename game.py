@@ -27,6 +27,7 @@ def cowboy_interaction():
 
             if lives <= 0:
                 print("You are out of lives and have lost the game. Guess you will never get home...")
+                time.sleep(5)
                 quit()
 
         elif filtered_input[0] == 'punch':
@@ -64,6 +65,7 @@ def mummy_interaction():
 
             if lives <= 0:
                 print("You are out of lives and have lost the game. Guess you will never get home...")
+                time.sleep(5)
                 quit()
 
         elif (filtered_input[0] == 'take') and (filtered_input[1] == 'gem'):
@@ -81,6 +83,7 @@ def mummy_interaction():
 
                 if lives <= 0:
                     print("You are out of lives and have lost the game. Guess you will never get home...")
+                    time.sleep(5)
                     quit()
 
         elif (filtered_input[0] == 'go') and (filtered_input[1] == 'south'):
@@ -121,6 +124,7 @@ def poseidon_interaction():
 
             if lives <= 0:
                 print("You are out of lives and have lost the game. Guess you will never get home...")
+                time.sleep(5)
                 quit()
         
     
@@ -137,6 +141,7 @@ def hades_interaction():
 
     if lives <= 0:
         print("You are out of lives and have lost the game. Guess you will never get home...")
+        time.sleep(5)
         quit()
         
     print('Hades speaks to you, his demonic voice sending shivers down your spine:\n"So mortal, you come seeking your possessions back? Well, I\'ll give it to you if you give me my brother\'s toy."')
@@ -473,9 +478,10 @@ You reach the local “repair shop” and enter through the front door.""")
 
         execute_command(command)
 
-        if (item_gem in rooms["Repair"]["items"]) and (item_keys in rooms["Repair"]["items"]) and (item_metal in rooms["Repair"]["items"]):
+        if (item_gem in rooms["Repair"]["items"]) and (item_keys in rooms["Repair"]["items"]) and (item_metal in rooms["Repair"]["items"]) and (item_whiskey in rooms["Repair"]["items"]):
             win = True
             print("Congratulations you have won.")
+            time.sleep(5)
             break
 
 
