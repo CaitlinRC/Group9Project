@@ -25,7 +25,7 @@ Maybe there is some hope of getting home… """,
 
                "interaction": False,
 
-               "bgm": "underwater.mp3"
+               "bgm": "empty.mp3"
 
                }
 
@@ -111,7 +111,7 @@ This would be perfect to fix your ship’s exhaust with; however, you can’t cu
 
               "interaction": False,
 
-              "bgm": "underwater.mp3"
+              "bgm": "empty.mp3"
               }
 
 underworld_room = {"name": "Underworld",
