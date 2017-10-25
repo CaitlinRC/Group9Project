@@ -18,7 +18,7 @@ def cowboy_interaction():
 
     while True:
 
-        user_input = input('\nYou can: \n\n1)TALK to him \n2)PUNCH him  \n3)KISS him (because why not) \n\nWhat do you do: ')
+        user_input = input('\nYou can: \n\nTALK to him \nPUNCH him  \nKISS him (because why not) \n\nWhat do you do: ')
 
         filtered_input = normalise_input(user_input)
 
@@ -62,8 +62,9 @@ def mummy_interaction():
 
     while True:
         
-        user_input = input('\nYou can: Attempt to TAKE the gem, LEAVE to escape the room or attempt to FIGHT: ')
-
+        print('\nYou can: \n\nAttempt to TAKE the gem \nLEAVE to escape the room \nAttempt to FIGHT')
+        user_input = input("What are you going to do: ")
+        
         filtered_input = normalise_input(user_input)
 
         if filtered_input == []:
@@ -169,7 +170,7 @@ def hades_interaction():
 
     while True:
 
-        user_input = input("Your options are: DROP Trident, GO SOUTH back to the Underworld: ")
+        user_input = input("Your options are: DROP Trident, LEAVE to escape Hade\'s lair: ")
 
         filtered_input = normalise_input(user_input)
 
