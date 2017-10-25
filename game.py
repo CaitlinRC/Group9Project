@@ -30,6 +30,8 @@ def cowboy_interaction():
 
             print('\nHe doesn\'t appreciate you trying to smart talk him. Before you can get a word out, he punches you in the face (-1 Life).')
             lives -= 1
+            print('\nYou have ', lives, 'lives left.')
+
 
             if lives <= 0:
                 print("You are out of lives and have lost the game. Guess you will never get home...")
@@ -85,6 +87,7 @@ def mummy_interaction():
 
                 print('You attempt to attack the mummy, flailing at it with your weapons. They have no effect.\nThe mummy clearly doesn\'t feel pain and continues to sink its teeth into your skin. (-1 Life)')
                 lives -= 1
+                print('\nYou have ', lives, 'lives left.')
 
                 if lives <= 0:
                     print("You are out of lives and have lost the game. Guess you will never get home...")
@@ -108,6 +111,8 @@ def mummy_interaction():
                 else:
                     print('The mummy\'s teeth sink into your skin! If only you had some protection... (-1 Life)')
                     lives -= 1
+                    print('\nYou have ', lives, 'lives left.')
+
 
                     if lives <= 0:
                         print("You are out of lives and have lost the game. Guess you will never get home...")
@@ -141,6 +146,8 @@ def poseidon_interaction():
 
             print("\nIncorrect! As a punishment, Poseidon smites you. (-1 Life)")
             lives -= 1
+            print('\nYou have ', lives, 'lives left.')
+
 
             if lives <= 0:
                 print("You are out of lives and have lost the game. Guess you will never get home...")
@@ -158,6 +165,8 @@ def poseidon_interaction():
         else:
             print("\nIncorrect! As a punishment, Poseidon smites you. (-1 Life)")
             lives -= 1
+            print('\nYou have ', lives, 'lives left.')
+
 
             if lives <= 0:
                 print("You are out of lives and have lost the game. Guess you will never get home...")
@@ -175,6 +184,8 @@ def hades_interaction():
     
     print("The lava burns your feet. (-1 Life)")
     lives -= 1
+    print('\nYou have ', lives, 'lives left.')
+
 
     if lives <= 0:
         print("You are out of lives and have lost the game. Guess you will never get home...")
@@ -332,6 +343,7 @@ def drop(item_id):
 def print_menu(exits, room_items, inv_items):
 
     global current_room
+    global lives
 
     if current_room["interaction"] == True:
 
@@ -356,6 +368,7 @@ def print_menu(exits, room_items, inv_items):
             hades_interaction()
  
     
+    print("\nYou have: ", lives, "lives remaining.")
     print("\nYou can:\n")
     
     for direction in exits:
