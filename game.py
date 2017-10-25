@@ -62,7 +62,7 @@ def mummy_interaction():
 
     while True:
         
-        user_input = input('\nYou can: Attempt to TAKE the gem, GO SOUTH to the previous room or attempt to FIGHT: ')
+        user_input = input('\nYou can: Attempt to TAKE the gem, LEAVE to escape the room or attempt to FIGHT: ')
 
         filtered_input = normalise_input(user_input)
 
@@ -98,11 +98,8 @@ def mummy_interaction():
                     time.sleep(5)
                     quit()
 
-        elif (filtered_input[0] == 'go') and (filtered_input[1] == 'south'):
+        elif filtered_input[0] == 'leave':
 
-            exits = current_room["exits"]
-            current_room = move(exits, "south")
-            print_room(current_room)
             break
 
         else:
@@ -123,8 +120,19 @@ def poseidon_interaction():
 
         user_input = input("What is it? ")
         filtered_input = normalise_input(user_input)
+
+        if filtered_input == []:
+
+            print("\nIncorrect! As a punishment, Poseidon smites you. (-1 Life)")
+            lives -= 1
+
+            if lives <= 0:
+                print("You are out of lives and have lost the game. Guess you will never get home...")
+                time.sleep(5)
+                quit()
+            
         
-        if filtered_input[0] == 'nothing':
+        elif filtered_input[0] == 'nothing':
 
             print("\nPoseidon stares at you in shock for a moment before handing over his trident and storming off in a huff.")
             inventory.append(item_trident)
@@ -169,7 +177,7 @@ def hades_interaction():
 
             print('Please enter a valid option: ')
 
-        elif (filtered_input[0] == "drop") and (filtered_input[1] == "trident"):
+        elif (filtered_input[0] == "drop") and (filtered_input[1] == "trident") and (item_trident in inventory):
 
             inventory.remove(item_trident)
             inventory.append(item_keys)
@@ -177,16 +185,10 @@ def hades_interaction():
             print("\nHades chucks you the set of keys and gestures for you to get out, too focused on the trident to care about you anymore.")
 
             current_room["interaction"] = False
-            exits = current_room["exits"]
-            current_room = move(exits, "south")
-            print_room(current_room)
             break
 
-        elif (filtered_input[0] == "go") and (filtered_input[1] == "south"):
+        elif filtered_input[0] == "leave":
 
-            exits = current_room["exits"]
-            current_room = move(exits, "south")
-            print_room(current_room)
             break
 
         else:

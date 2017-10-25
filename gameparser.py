@@ -11,7 +11,7 @@ import string
 
 key_words = ['north', 'south', 'east', 'west', 'go', 'drop', 'take', 'use',
              'sword', 'keys', 'ore', 'gem', 'armour', 'trident', 'whiskey', 
-             'kiss', 'punch', 'talk', 'fight', 'metal', 'nothing']
+             'kiss', 'punch', 'talk', 'fight', 'metal', 'nothing', 'leave']
 # ADD MORE LATER??
 
 def remove_punctuation(text):

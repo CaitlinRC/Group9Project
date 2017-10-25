@@ -23,7 +23,9 @@ Maybe there is some hope of getting home… """,
 
                "items": [],
 
-               "interaction": False
+               "interaction": False,
+
+               "bgm": "repair.mp3"
 
                }
 
@@ -76,7 +78,7 @@ In the suit of armour’s hands is a longsword, the metal shining brightly in th
 
                  "interaction": False,
 
-                 "bgm": "Boss.mp3"
+                 "bgm": "boss.mp3"
                  }
 
 egypt_room = {"name": "Egypt",
@@ -125,7 +127,7 @@ Your only route to the boss room is by convincing Charon, a man with eyes blazin
 
                    "interaction": True,
                    
-                   "bgm": "Boss.mp3"
+                   "bgm": "boss.mp3"
                    }
 
 boss_room = {"name": "Boss",
@@ -142,7 +144,7 @@ In Hades’s hand, is a pair of familiar looking keys – your Hello Kitty keych
 
              "interaction": True,
 
-             "bgm": "saloon.mp3"
+             "bgm": "boss.mp3"
              }
 
 rooms = {
