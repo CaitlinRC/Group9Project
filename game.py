@@ -73,31 +73,46 @@ def mummy_interaction():
 
         elif filtered_input[0] == 'fight':
 
-            print('You attempt to attack the mummy, flailing at it with your weapons. They have no effect.\nThe mummy clearly doesn\'t feel pain and continues to sink its teeth into your skin. (-1 Life)')
-            lives -= 1
-
-            if lives <= 0:
-                print("You are out of lives and have lost the game. Guess you will never get home...")
-                time.sleep(5)
-                quit()
-
-        elif (filtered_input[0] == 'take') and (filtered_input[1] == 'gem'):
-
             if item_armour["worn"] == True:
-
-                print('You grab the gem, the mummys teeth unable to harm you in your suit of armour.')
+            
+                print('\nYou push past the mummy and grab the gem!')
                 inventory.append(item_gem)
                 current_room["interaction"] = False
                 break
 
             else:
-                print('The mummy\'s teeth sink into your skin! If only you had some protection... (-1 Life)')
+            
+
+                print('You attempt to attack the mummy, flailing at it with your weapons. They have no effect.\nThe mummy clearly doesn\'t feel pain and continues to sink its teeth into your skin. (-1 Life)')
                 lives -= 1
 
                 if lives <= 0:
                     print("You are out of lives and have lost the game. Guess you will never get home...")
                     time.sleep(5)
                     quit()
+
+        elif filtered_input[0] == 'take':
+
+            if 'gem' not in filtered_input:
+                print('Take what? ')
+
+            else:
+
+                if item_armour["worn"] == True:
+
+                    print('You grab the gem, the mummys teeth unable to harm you in your suit of armour.')
+                    inventory.append(item_gem)
+                    current_room["interaction"] = False
+                    break
+
+                else:
+                    print('The mummy\'s teeth sink into your skin! If only you had some protection... (-1 Life)')
+                    lives -= 1
+
+                    if lives <= 0:
+                        print("You are out of lives and have lost the game. Guess you will never get home...")
+                        time.sleep(5)
+                        quit()
 
         elif filtered_input[0] == 'leave':
 
