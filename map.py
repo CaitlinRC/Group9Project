@@ -43,7 +43,7 @@ Neither of them look happy to see you.""",
 
                "interaction": True,
                
-               "bgm": "saloon.mp3"
+               "bgm": "saloon.wav"
 
                }
 
@@ -60,7 +60,7 @@ The guards allow you to pass and you stand facing the great god, whose trident g
 
                  "interaction": True,
 
-                 "bgm": "underwater.mp3"                 
+                 "bgm": "underwater.wav"                 
 
                  }
 
@@ -111,7 +111,7 @@ This would be perfect to fix your ship’s exhaust with; however, you can’t cu
 
               "interaction": False,
 
-              "bgm": "empty.mp3"
+              "bgm": "space.mp3"
               }
 
 underworld_room = {"name": "Underworld",
