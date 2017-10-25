@@ -193,15 +193,25 @@ def hades_interaction():
 
             print('Please enter a valid option: ')
 
-        elif (filtered_input[0] == "drop") and (filtered_input[1] == "trident") and (item_trident in inventory):
+        elif filtered_input[0] == "drop":
 
-            inventory.remove(item_trident)
-            inventory.append(item_keys)
+            if 'trident' not in filtered_input:
 
-            print("\nHades chucks you the set of keys and gestures for you to get out, too focused on the trident to care about you anymore.")
+                print('\nDrop what? ')
 
-            current_room["interaction"] = False
-            break
+            elif item_trident not in inventory:
+
+                print('\nYou can\'t drop what you don\'t have!')
+
+            else:
+                
+                inventory.remove(item_trident)
+                inventory.append(item_keys)
+
+                print("\nHades chucks you the set of keys and gestures for you to get out, too focused on the trident to care about you anymore.")
+
+                current_room["interaction"] = False
+                break
 
         elif filtered_input[0] == "leave":
 
