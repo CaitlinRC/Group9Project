@@ -25,7 +25,7 @@ Maybe there is some hope of getting home… """,
 
                "interaction": False,
 
-               "bgm": "empty.mp3"
+               "bgm": "empty.wav"
 
                }
 
@@ -78,7 +78,7 @@ In the suit of armour’s hands is a longsword, the metal shining brightly in th
 
                  "interaction": False,
 
-                 "bgm": "castle.mp3"
+                 "bgm": "castle.wav"
                  }
 
 egypt_room = {"name": "Egypt",
@@ -93,7 +93,7 @@ In the centre of the room, lies a golden sarcophagus, riddled with gems that loo
 
               "interaction": True,
 
-              "bgm": "egypt.mp3"
+              "bgm": "egypt.wav"
               }
 
 space_room = {"name": "Space",
@@ -111,7 +111,7 @@ This would be perfect to fix your ship’s exhaust with; however, you can’t cu
 
               "interaction": False,
 
-              "bgm": "space.mp3"
+              "bgm": "space.wav"
               }
 
 underworld_room = {"name": "Underworld",
@@ -127,7 +127,7 @@ Your only route to the boss room is by convincing Charon, a man with eyes blazin
 
                    "interaction": True,
 
-                   "bgm": "underworld.mp3"
+                   "bgm": "underworld.wav"
                    }
 
 boss_room = {"name": "Boss",
@@ -144,7 +144,7 @@ In Hades’s hand, is a pair of familiar looking keys – your Hello Kitty keych
 
              "interaction": True,
 
-             "bgm": "boss.mp3"
+             "bgm": "boss.wav"
 
              }
 
